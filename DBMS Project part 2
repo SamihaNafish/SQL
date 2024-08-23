@@ -1,0 +1,28 @@
+SELECT customerid AS Customer_Account, cus_fname||' '||cus_mname||' '||cus_lname AS
+Customer_Name,billing_street||' '||billing_apt||' '||billing_city||' '||billing_state||' 
+'||billing_zip AS Address, cus_phone 
+FROM customer;
+SELECT o.orderid, emp_fname||' '||emp_lname AS Sales_Person,o.customerid AS
+Customer_Account, cus_fname||' '||cus_lname AS Customer_Name,billing_street||' 
+'||billing_apt||' '||billing_city||' '||billing_state||' '||billing_zip AS Billing_Address, 
+Del_street||' '||Del_apt||' '||Del_city||' '||Del_state||' '||Del_zip AS Delivery_Address 
+FROM orders o JOIN employee e JOIN customer c JOIN shipment s
+ON o.salesrepid=e.employeeid AND o.customerid=c.customerid AND o.orderid=s.orderid
+WHERE o.orderid=40001;
+SELECT o.orderid, a.art_des, a.art_price AS Unit_Price, g.qty_ordered 
+FROM orders o JOIN assign g JOIN artworks a
+ON o.orderid=g.orderid AND a.artid=g.artid
+WHERE o.orderid=40001;
+SELECT o.orderid, emp_fname||' '||emp_lname AS Sales_Person, emp_phone 
+FROM orders o, employee e 
+WHERE (o.salesrepid=e.employeeid) AND o.orderid=40001;
+SELECT v.driverid, e.emp_fname||' '||e.emp_lname AS Driver_Name, c.cus_fname||' 
+'||c.cus_lname AS Customer_Name
+FROM employee e JOIN vehicle v JOIN shipment s JOIN orders o JOIN customer c
+ON o.orderid=s.orderid AND s.vehicleid=v.vehicleid AND v.driverid=e.employeeid AND
+o.customerid=c.customerid 
+WHERE v.driverid=1004010;
+SELECT art_des, art_price AS Unit_price, art_qty AS Stock_Quantity, art_price*art_qty AS
+Total_Value 
+FROM Artworks 
+WHERE art_price>25;
