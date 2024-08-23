@@ -1,0 +1,64 @@
+INSERT INTO Customer VALUES ('CIN00200','Harry',NULL,'Potter', 'Sanderline', '1908', 'Allen', 'TX', '75002',
+'+14693038709', 'harry.potter@gmail.com');
+INSERT INTO Customer VALUES ('CIN00210','Masud', 'Parvez','Rana', 'Houston Dr', '1800', 'Plano', 'TX', '75030',
+'+14693048509', 'masud.rana@gmail.com');
+INSERT INTO Customer VALUES ('CIN00209','Tom',NULL,'Cruise', 'Beverly Hills', '2208', 'Los Angeles', 'California',
+'878002', '+14695587095', 'tom.cruise@yahoo.com');
+INSERT INTO Customer VALUES ('CIN00610','Jackie', 'M','Chan', 'Markana Blvd', '9898', 'Richardson', 'TX', '75090',
+'+14696668509', 'jackie.chan@gmail.com');
+INSERT INTO Customer VALUES ('CIN00240','Hermaione', NULL,'Granger', 'Private Dr', '9769', 'Hogwarts', 'TX',
+'75098', '+14696693409', 'hermaione.granger@yahoo.com');
+INSERT INTO Orders VALUES (40001, 'CIN00240', 1002111,7007222, '2023-03-22',25.34);
+INSERT INTO Orders VALUES (40002, 'CIN00610', 1002112,7007223, '2023-05-06',60.33);
+INSERT INTO Orders VALUES (40003, 'CIN00209', 1002113,7007224, '2023-04-15',29.34);
+INSERT INTO Orders VALUES (40004, 'CIN00610', 1002113,7007225, '2023-01-23',22.04);
+INSERT INTO Orders VALUES (40005, 'CIN00200', 1002111,7007226, '2023-03-16',16.60);
+INSERT INTO ArtWorks VALUES ('PNT00040', '6 by 6 oil painting', 16.60, 20);
+INSERT INTO ArtWorks VALUES ('CLT00010', 'Medium sized clay pottery', 20.11, 50);
+INSERT INTO ArtWorks VALUES ('GLS00019', 'Glass sculpture 5 feet 2 inch', 29.34, 7);
+INSERT INTO ArtWorks VALUES ('CRM00257', 'Small sized ceramic vases', 5.51, 60);
+INSERT INTO ArtWorks VALUES ('PHT00900', '3X3 wild life photo', 25.34, 3);
+INSERT INTO Vehicle VALUES ('CVN-0010', 1004004, 'MLK-1234', '2024-11-27', '2023-08-11');
+INSERT INTO Vehicle VALUES ('MVN-0007', 1004008, 'ITK-1245', '2025-12-18', '2023-07-05');
+INSERT INTO Vehicle VALUES ('CVN-0009', 1004010, 'JHK-2145', '2026-04-10', '2023-05-05');
+INSERT INTO Vehicle VALUES ('MVN-0010', 1004015, 'KMP-2845', '2026-10-17', '2023-05-23');
+INSERT INTO Shipment VALUES (300001, 40001, 'CVN-0010', 'Causly Ave', '6050', 'Arlington', 'TX', '75020', '2023-03-
+30');
+INSERT INTO Shipment VALUES (300002, 40002, 'MVN-0007', 'Potbelly', '45', 'Irwin', 'TX', '75080', '2023-05-13');
+INSERT INTO Shipment VALUES (300003, 40003, ' MVN-0010', 'Kelly', '459', 'Denton', 'TX', '75100', '2023-04-21');
+INSERT INTO Shipment VALUES (300004, 40004, 'CVN-0009', 'Lamar Blvd', '102', 'Murphy', 'TX', '75109', '2023-01-
+31');
+INSERT INTO Shipment VALUES (300005, 40005, 'CVN-0009', 'Lamar Blvd', '102', 'Murphy', 'TX', '75109', '2023-01-
+31');
+INSERT INTO SalesRep VALUES (1002111, 25.55);
+INSERT INTO SalesRep VALUES (1002112, 45.55);
+INSERT INTO SalesRep VALUES (1002113, 100.06);
+INSERT INTO SalesRep VALUES (1002114, 67.78);
+INSERT INTO SalesRep VALUES (1002115, 87.66);
+INSERT INTO Driver VALUES (1004004, 'CVN-0010', 12345678, '2024-01-31');
+INSERT INTO Driver VALUES (1004008, 'MVN-0007', 12345698, '2024-03-29');
+INSERT INTO Driver VALUES (1004010, 'CVN-0009', 12345699, '2024-04-29');
+INSERT INTO Driver VALUES (1004015, 'MVN-0010', 12345668, '2024-03-26');
+INSERT INTO Assign VALUES (40001, 'PHT00900', 1);
+INSERT INTO Assign VALUES (40002, 'CLT00010', 3);
+INSERT INTO Assign VALUES (40003, 'GLS00019', 1);
+INSERT INTO Assign VALUES (40004, 'CRM00257', 4);
+INSERT INTO Assign VALUES (40005, 'PNT00040', 1);
+INSERT INTO Employee VALUES (1004004, '123-11-1234', 'David', NULL, 'Hoff', '1982-02-07', 'Driver', 5000.30, 'xyz', 
+'33', 'Richardson', 'TX', '75020', '+14567878970' );
+INSERT INTO Employee VALUES (1004008, '123-10-1234', 'Kevin', NULL, 'Costner', '1979-03-09', 'Driver', 4589.30, 
+'abc', '89', 'Mckinney', 'TX', '75029', '+11237878970' );
+INSERT INTO Employee VALUES (1004010, '123-10-4534', 'John', NULL, 'Stone', '1989-12-09', 'Driver', 4988.30, 'mnkl', 
+'66', 'Mckinney', 'TX', '75029', '+17685878970' );
+INSERT INTO Employee VALUES (1004015, '123-18-4500', 'Albert', NULL, 'Gideon', '1990-10-09', 'Driver', 4687.90, 
+'pokj', '55', 'Plano', 'TX', '75009', '+17681234970' );
+INSERT INTO Employee VALUES (1002111, '129-10-4590', 'Robert', NULL, 'Marcos', '1999-10-05', 'Sales 
+Representative', 5000.90, 'sdfg', '85', 'Plano', 'TX', '75009', '+17686789970' );
+INSERT INTO Employee VALUES (1002112, '199-10-4567', 'Neil', NULL, 'Cooper', '1986-09-13', 'Sales Representative', 
+5067.78, 'suytkl', '987', 'Murphy', 'TX', '75909', '+17612345970' );
+INSERT INTO Employee VALUES (1002113, '199-54-3467', 'Rulf', NULL, 'Lindon', '2002-03-13', 'Sales Representative', 
+5167.78, 'suytklkkk', '99', 'Allen', 'TX', '75003', '+17612343456' );
+INSERT INTO Employee VALUES (1002114, '109-54-9467', 'Alen', NULL, 'Wisley', '2000-06-14', 'Sales Representative', 
+5097.78, 'klkkk', '100', 'Garland', 'TX', '75013', '+17612343456' );
+INSERT INTO Employee VALUES (1002115, '109-87-9123', 'Joy', NULL, 'Rosario', '2001-02-14', 'Sales Representative', 
+5045.23, 'hdhdhd', 'Garden House 234', 'Garland', 'TX', '75013', '+13456783456' )
